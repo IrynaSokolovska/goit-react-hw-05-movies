@@ -18,6 +18,7 @@ export const ListMovieUl = styled.ul`
 export const SectionMovie = styled.section`
   padding: 30px 0;
 `;
+
 // export const MuvList = styled.ul`
 //   display: flex;
 //   flex-wrap: wrap;

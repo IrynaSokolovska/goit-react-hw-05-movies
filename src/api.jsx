@@ -41,16 +41,12 @@ export const fetchCast = async (movieId, controller) => {
   );
   return response.data;
 };
+// Reviews
+export const fetchReviews = async (movieId, controller) => {
+  const response = await axios.get(
+    `/movie/${movieId}/reviews?api_key=${API_KEY}`,
+    { signal: controller.current.signal }
+  );
 
-// export const fetchMoviesInp = async (searchMovie, controller) => {
-//   const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`;
-
-//   try {
-//     const response = await fetch(API_URL);
-//     const data = await response.json();
-//     return data.results;
-//   } catch (error) {
-//     console.error('Error fetching movies', error);
-//     return [];
-//   }
-// };
+  return response.data;
+};

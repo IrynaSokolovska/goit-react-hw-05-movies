@@ -25,28 +25,3 @@ const Layout = () => (
 );
 
 export default Layout;
-
-// const Layout = () => (
-//   <>
-//     <Wrapper>
-//       <header>
-//         <NavList>
-//           <li>
-//             <StyledLink to="/">Home</StyledLink>
-//           </li>
-//           <li>
-//             <StyledLink to="/movies">Movies</StyledLink>
-//           </li>
-//           <li>
-//             <StyledLink to="/movies/:movieId">MoviesDetailsPage</StyledLink>
-//           </li>
-//         </NavList>
-//       </header>
-//       <main>
-//         <Suspense fallback={<div>Loading...</div>}>
-//           <Outlet />
-//         </Suspense>
-//       </main>
-//     </Wrapper>
-//   </>
-// );
