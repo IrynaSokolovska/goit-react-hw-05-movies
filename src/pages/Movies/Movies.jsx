@@ -5,6 +5,7 @@ import { fetchMoviesInp } from 'api';
 import { SearchMovieForm } from '../Movies/SearchMovieForm';
 import { useQueryParams } from 'useQueryParams';
 import toast, { Toaster } from 'react-hot-toast';
+import { SectionMovie } from './Movies.styled';
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);
@@ -42,11 +43,11 @@ const Movies = () => {
   return (
     <>
       {' '}
-      <section>
+      <SectionMovie>
         {movies && <SearchMovieForm movies={movies} />}
         {searchMovie && <p>Not found, please try something else </p>}
         <Toaster />
-      </section>
+      </SectionMovie>
     </>
   );
 };

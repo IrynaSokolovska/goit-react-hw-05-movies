@@ -8,11 +8,21 @@ export const MuvWrapper = styled.div`
   background-color: #f5f1f1;
   /* height: 40px; */
 `;
-export const MuvList = styled.ul`
+export const ListMovieUl = styled.ul`
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 25px;
-  column-gap: 25px;
-  padding: 25px;
-  justify-content: center;
+  width: 328px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
 `;
+export const SectionMovie = styled.section`
+  padding: 30px 0;
+`;
+// export const MuvList = styled.ul`
+//   display: flex;
+//   flex-wrap: wrap;
+//   row-gap: 25px;
+//   column-gap: 25px;
+//   padding: 25px;
+//   justify-content: center;
+// `;

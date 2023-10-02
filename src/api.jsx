@@ -34,7 +34,7 @@ export const fetchMovDetPage = async (movieId, controller) => {
 };
 // Cast.jsx
 
-export const fetchICast = async (movieId, controller) => {
+export const fetchCast = async (movieId, controller) => {
   const response = await axios.get(
     `/movie/${movieId}/credits?api_key=${API_KEY}`,
     { signal: controller.current.signal }

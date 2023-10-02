@@ -2,6 +2,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { fetchColHomeFilms } from 'api';
 import { MovieList } from 'pages/Movies/MovieList';
 import { useState, useRef, useEffect } from 'react';
+import { Section, Title } from './Home.styled';
 
 const Home = () => {
   const [movies, setMovies] = useState(null);
@@ -40,8 +41,8 @@ const Home = () => {
 
   return (
     <main>
-      <section>
-        <h2>Trending today</h2>
+      <Section>
+        <Title>Trending today</Title>
 
         {error && !loading && requestCancelled && (
           <p>
@@ -52,7 +53,7 @@ const Home = () => {
 
         {movies && movies.length > 0 && <MovieList movies={movies} />}
         <Toaster />
-      </section>
+      </Section>
     </main>
   );
 };
