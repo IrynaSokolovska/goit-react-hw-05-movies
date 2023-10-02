@@ -2,6 +2,8 @@ import { useRef, useState, useEffect } from 'react';
 import { Suspense } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { fetchMovDetPage } from 'api';
+import { Loader } from 'components/Loader/Loader';
+
 const MoviesDetailsPage = () => {
   const [moviesInfo, setMoviesInfo] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -38,7 +40,7 @@ const MoviesDetailsPage = () => {
   return (
     <>
       <Link to={backLinkLocationRef.current}>Back</Link>
-
+      {loading && <Loader />}
       {moviesInfo && (
         <div>
           <img

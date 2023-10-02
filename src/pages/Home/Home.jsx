@@ -3,6 +3,7 @@ import { fetchColHomeFilms } from 'api';
 import { MovieList } from 'pages/Movies/MovieList';
 import { useState, useRef, useEffect } from 'react';
 import { Section, Title } from './Home.styled';
+import { Loader } from 'components/Loader/Loader';
 
 const Home = () => {
   const [movies, setMovies] = useState(null);
@@ -43,14 +44,13 @@ const Home = () => {
     <main>
       <Section>
         <Title>Trending today</Title>
-
+        {loading && <Loader />}
         {error && !loading && requestCancelled && (
           <p>
             ❌ Something went wrong,try reload page{' '}
             {toast.error('Ooops, something went wrong')}
           </p>
         )}
-
         {movies && movies.length > 0 && <MovieList movies={movies} />}
         <Toaster />
       </Section>
