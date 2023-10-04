@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-  display: flex;
   padding: 0 15px;
   gap: 20px;
   align-items: center;
